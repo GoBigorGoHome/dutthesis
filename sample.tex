@@ -1,0 +1,89 @@
+\documentclass{dutrep}
+\newcommand{\tbs}{\textbackslash}
+
+\begin{document}
+	\title{萌萌哒标题}
+	\titleEN{Such A Cute Title}
+	\school{Unkown}
+	\major{Unkown}
+	\name{Noname}
+	\ID{123456789}
+	\advisor{My Advisor}
+	\reviewer{Awsome Reviewer}
+	% \date{2013年3月1日}
+	\maketitle
+
+	\begin{abstract}
+		我是萌萌哒摘要。
+	\end{abstract}
+
+	\keywords{kw1; kw2, kw...}
+
+	\begin{abstractEN}
+		This is the abstract. It is not long. Read through it and you can grasp the main idea of this article.
+
+	\end{abstractEN}
+
+	\keywordsEN{plasma; fluid modelling; packing-bed plasma reactor}
+
+	\tableofcontents
+
+	\begin{introduction}
+		萌萌哒引言。
+	\end{introduction}
+
+	\chapter{电介质阻挡放电}
+	介质阻挡放电（Dielectric Barrier Discharge, DBD）。
+	\section{简介}
+	Blablabla。。。
+
+	\lipsum[2-10]
+	\section{放电过程}
+	汤森放电与辉光放电。
+
+	蒙自是个可爱的小城。文学院在城外南湖边，原海关旧址。据浦薛凤记：“一进大门，松柏夹道，殊有些清华工字厅一带情景。故学生有戏称昆明如北平，蒙自如海淀者。” \cite{1}
+
+	偶见梁实秋先生手书诗，且记之。
+	\begin{verse}
+		罷釣歸來不擊船\\
+		江村月落正勘眠\\
+		縱然一夜風吹去\\
+		只在蘆花淺水邊
+	\end{verse}
+	\subsection{\textsf{geometry}包简介}
+	This package provides a flexible \& easy interface to page dimensions. You can change the page layout with intuitive prameters. \cite{1}
+
+	\lipsum[2-10]
+	\subsection{Low-Level commands}
+	The font-characteristic changing commands we have discussed so far in this section are the \emph{high-level} font commands. Each of these commands is implemented by \LaTeX\ and the document class using \emph{low-level} font commands. The low-level commands have been developed for document class and package writers.
+
+	There is one use of low-level commands you should keep in mind. When you choose a font size for your document or for some part thereof, you also determine the \texttt{\textbackslash baselineskip}, the distance from the baseline of one line to the baseline of the next. Typically, a 10-point font size uses a 12 point \texttt{\textbackslash baselineskip}.  Occasionly, you may want to change the font size along with the \texttt{\textbackslash baselineskip}. A command for accomplishing this is
+
+	\noindent\texttt{\tbs fontsize\{9pt\}\{11pt\}\textbackslash selectfont}
+
+	which chages the font size to 9 point and the \texttt{\tbs baselineskip} to 11 point. To make this change for a single paragraph, you can type
+
+	\texttt{\{\%special paragraph\\
+	\tbs fontsize\{9pt\}\{11pt\}\tbs selectfont\\
+	\\
+	text\\
+	\\
+	\}\%end special paragraph}
+
+	Observe the blank line that follows \texttt{text} and marks the end of the paragraph; \texttt{\tbs par} would do the same thing.
+
+	\chapter{\textsf{fancyhdr}包简介}
+	This article describes how to customize the page layout of your \LaTeX\ documents, i.e how to change page margings and sizes, headers and footers, and the proper placement of figures and tables (collectively called floats) on the page.
+
+	Originally this was the documentation of the \textsf{fancyheadings} package. It did contain also other into, e.g. advanced use of marks. It has now been upgraded to include more, e.g. the handling of floats. The fancyheadings documentation has been upgraded to conform to version 2 of this package. For reasons of compatibility with certain operating systems, the name of the package has been changed to \textsf{fancyhdr}. Although this paper uses \LaTeXe\ commands, most of the techniques can be used with older \LaTeX\ versions with appropriate changes.
+
+\chapter{甄士隐梦幻识通灵，贾雨村风尘怀闺秀}
+此开卷第一回也。作者自云：因曾历过一番梦幻之后，故将真事隐去，而借“通灵”之说，撰此《石头记》一书也。故曰“甄士隐”云云。但书中所记何事何人？自又云：“今风尘碌碌，一事无成，忽念及当日所有之女子，一一细考校去，觉其行止见识，皆出于我之上。何我堂堂须眉，诚不若彼裙钗哉？实愧则有余，悔又无益之大无可如何之日也！当此，则自欲将已往所赖之天恩祖德，锦衣纨袴之时，饫甘餍肥之日，背父兄教育之恩德，以至今日一技无成、半生潦倒之罪，编述一集，以告天下人：我之罪固不可免，然闺阁之中本自历历有人，万不可因我之不肖，自护己短，一并使其泯灭也。”
+\thebibliography{99}
+\bibitem{1}
+\zihao{5}
+% \showthe\baselineskip
+宗璞《二十四番花信》[M].
+
+\end{document}
+
