@@ -5,7 +5,7 @@
 \LoadClass[a4paper]{report}
 \RequirePackage[fontset=founder,zihao=-4,linespread=1.25,UTF8]{ctex}
 \RequirePackage{calc}
-\RequirePackage[showframe]{geometry}
+\RequirePackage{geometry}
 
 % \geometry{a4paper,left=2.5cm,right=2.5cm,top=2.5cm+15.8090625pt+30bp,bottom=2.5cm,xetex}
 
