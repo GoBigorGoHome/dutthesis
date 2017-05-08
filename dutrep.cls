@@ -5,7 +5,7 @@
 \LoadClass[a4paper]{report}
 \RequirePackage[fontset=founder,zihao=-4,linespread=1.25,UTF8]{ctex}
 \RequirePackage{calc}
-\RequirePackage{geometry}
+\RequirePackage[showframe]{geometry}
 
 % \geometry{a4paper,left=2.5cm,right=2.5cm,top=2.5cm+15.8090625pt+30bp,bottom=2.5cm,xetex}
 
@@ -36,6 +36,7 @@
 \renewcommand{\bibname}{\hfill 参~考~文~献\hfill}
 \RequirePackage{lipsum}% generate random text
 
+\geometry{a4paper,left=2.5cm,right=2.5cm,top=2.5cm+15.8090625pt+30bp,bottom=2cm+30bp+13.550625pt,footskip=13.550625pt+30bp,headsep=30bp,headheight=15.8090625pt,xetex}% 1cm=28.4pt,
 
 \RequirePackage{fancyhdr}
 \fancyhf{} % clear all header and footer fields
@@ -57,7 +58,7 @@
 
 \newcommand{\Rule}[1]{\underline{\makebox[5cm][l]{#1}}}
 
-\geometry{a4paper,left=2.5cm,right=2.5cm,top=2.5cm+15.8090625pt+30bp,bottom=2cm+30bp+13.550625pt,footskip=13.550625pt+30bp,headsep=30bp,headheight=15.8090625pt,xetex}% 1cm=28.4pt,
+
 
 
 
