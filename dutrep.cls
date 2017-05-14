@@ -10,7 +10,7 @@
 % \geometry{a4paper,left=2.5cm,right=2.5cm,top=2.5cm+15.8090625pt+30bp,bottom=2.5cm,xetex}
 
 %\RequirePackage{cite}
-\RequirePackage[super,square]{natbib}
+\RequirePackage[super,square,compress,comma]{natbib}
 
 \RequirePackage[titles]{tocloft}
 \renewcommand{\cftdotsep}{0.1}
@@ -151,4 +151,5 @@
 
 \newcommand{\@reviewer}{Reviewer}
 \newcommand{\reviewer}[1]{\renewcommand{\@reviewer}{#1}}
+\RequirePackage[hidelinks]{hyperref}
 \endinput
