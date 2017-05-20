@@ -7,6 +7,10 @@
 \RequirePackage{calc}
 \RequirePackage{geometry}
 
+\setlength{\@fptop}{0pt}% see https://tex.stackexchange.com/questions/66252/placing-the-figure-exactly-at-the-top-of-the-page-in-latex for detail
+
+% \usepackage[margin=10pt,font=small,labelfont=bf,labelsep=quad]{caption}
+\RequirePackage[font=small,labelfont=bf,labelsep=quad]{caption}%format of caption for tables & figures
 % \geometry{a4paper,left=2.5cm,right=2.5cm,top=2.5cm+15.8090625pt+30bp,bottom=2.5cm,xetex}
 
 %\RequirePackage{cite}
