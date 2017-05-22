@@ -131,6 +131,10 @@
 }}
 {}
 
+\newenvironment{acknowledgement}
+{\chapter*{\hfill 致\qquad 谢\hfill}\addcontentsline{toc}{chapter}{致\qquad 谢}}
+{}
+
 % \RequirePackage{hyperref}
 % Metadata
 
