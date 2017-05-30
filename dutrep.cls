@@ -15,6 +15,7 @@
 
 %\RequirePackage{cite}
 \RequirePackage[super,square,compress,comma]{natbib}
+\renewcommand{\bibfont}{\zihao{5}} % set fontsize of the bibliography, see natbib document 
 
 \RequirePackage[titles]{tocloft}
 \renewcommand{\cftdotsep}{0.1}
