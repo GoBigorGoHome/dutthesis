@@ -9,13 +9,16 @@
 
 \setlength{\@fptop}{0pt}% see https://tex.stackexchange.com/questions/66252/placing-the-figure-exactly-at-the-top-of-the-page-in-latex for detail
 
+
+
+
 % \usepackage[margin=10pt,font=small,labelfont=bf,labelsep=quad]{caption}
 \RequirePackage[font=small,labelfont=bf,labelsep=quad]{caption}%format of caption for tables & figures
 % \geometry{a4paper,left=2.5cm,right=2.5cm,top=2.5cm+15.8090625pt+30bp,bottom=2.5cm,xetex}
 
 %\RequirePackage{cite}
-\RequirePackage[super,square,compress,comma]{natbib}
-\renewcommand{\bibfont}{\zihao{5}} % set fontsize of the bibliography, see natbib document 
+% \RequirePackage[super,square,compress,comma]{natbib}
+% \renewcommand{\bibfont}{\zihao{5}} % set fontsize of the bibliography, see natbib document
 
 \RequirePackage[titles]{tocloft}
 \renewcommand{\cftdotsep}{0.1}
@@ -38,8 +41,17 @@
 \titlespacing{\section}{0pt}{0.5\baselineskip}{0pt}
 
 \renewcommand{\contentsname}{\hfill 目\qquad 录\hfill}
-\renewcommand{\bibname}{\hfill 参~考~文~献\hfill}
-\RequirePackage{lipsum}% generate random text
+% \renewcommand{\bibname}{参~考~文~献} %Redefine \bibname does not work with biblatex, see https://tex.stackexchange.com/questions/56950/trying-to-change-bibliography-references-header for detail
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage[backend=biber,style=gb7714-2015]{biblatex}
+\renewcommand{\bibfont}{\zihao{5}}
+\defbibheading{bibliography}[参~考~文~献]{%
+\chapter*{\hfill #1\hfill}%
+\addcontentsline{toc}{chapter}{#1}%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \RequirePackage{lipsum}% generate random text
 
 \geometry{a4paper,left=2.5cm,right=2.5cm,top=2.5cm+15.8090625pt+30bp,bottom=2cm+30bp+13.550625pt,footskip=13.550625pt+30bp,headsep=30bp,headheight=15.8090625pt,xetex}% 1cm=28.4pt,
 
@@ -160,5 +172,6 @@
 
 \newcommand{\@reviewer}{Reviewer}
 \newcommand{\reviewer}[1]{\renewcommand{\@reviewer}{#1}}
+
 \RequirePackage[hidelinks]{hyperref}
 \endinput
