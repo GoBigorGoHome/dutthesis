@@ -4,10 +4,15 @@
 
 \LoadClass[a4paper]{report}
 \RequirePackage[fontset=founder,zihao=-4,linespread=1.25,UTF8]{ctex}
+% \ctexset{
+%     chapter/format = \sffamily\raggedright
+% }
+
 \RequirePackage{calc}
 \RequirePackage{geometry}
 
 \setlength{\@fptop}{0pt}% see https://tex.stackexchange.com/questions/66252/placing-the-figure-exactly-at-the-top-of-the-page-in-latex for detail
+% \setlength{\@fpbot}{0pt}% see https://tex.stackexchange.com/questions/28556/how-to-place-a-float-at-the-top-of-a-floats-only-page for detail
 
 
 
@@ -30,15 +35,16 @@
 
 
 \RequirePackage{titlesec}
-
-\titleformat{\chapter}{\raggedright\heiti\zihao{-3}\linespread{1.5}\thispagestyle{fancy}}{\thechapter}{1em}{}
+% see https://github.com/CQUtug/TeXProposal/blob/master/texproposal.sty \ctexset{...}
+\titleformat{\chapter}{\zihao{-3}\heiti\raggedright\linespread{1.5}\thispagestyle{fancy}}{\thechapter}{1em}{}
 \titlespacing{\chapter}{0pt}{-17pt}{11bp}
 
-\titleformat{\section}{\raggedright\heiti\zihao{4}\linespread{1.5}}{\thesection}{1em}{}
+\titleformat{\section}{\zihao{4}\raggedright\heiti\linespread{1.5}}{\thesection}{1em}{}
 \titlespacing{\section}{0pt}{0.5\baselineskip}{0pt}
 
-\titleformat{\subsection}{\raggedright\heiti\zihao{-4}\linespread{1.5}}{\thesubsection}{1em}{}
-\titlespacing{\section}{0pt}{0.5\baselineskip}{0pt}
+\titleformat{\subsection}{\zihao{-4}\heiti\raggedright\linespread{1.5}}{\thesubsection}{1em}{}
+\titlespacing{\subsection}{0pt}{0.5\baselineskip}{0pt}
+
 
 \renewcommand{\contentsname}{\hfill 目\qquad 录\hfill}
 % \renewcommand{\bibname}{参~考~文~献} %Redefine \bibname does not work with biblatex, see https://tex.stackexchange.com/questions/56950/trying-to-change-bibliography-references-header for detail
@@ -74,10 +80,6 @@
 \newCJKfontfamily\heiti[AutoFakeBold=3]{FZHei-B01}
 
 \newcommand{\Rule}[1]{\underline{\makebox[5cm][l]{#1}}}
-
-
-
-
 
 \renewcommand{\maketitle}{%
 \newgeometry{left=2.5cm,right=2.5cm,top=2.5cm+15.8090625pt+30bp,bottom=2.5cm}
